@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Kreegerator::VERSION
   gem.authors       = ["Ben Kreeger"]
   gem.email         = ["ben@kree.gr"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{A set of generators for various projects I work on.}
+  gem.summary       = %q{A set of generators for various projects I work on.}
+  gem.homepage      = 'http://github.com/kreeger/kreegerator'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
