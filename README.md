@@ -1,20 +1,23 @@
 # Kreegerator
 
-A set of generators for various projects I work on.
+A set of generators and batch processors for various projects I work on.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install it as a gem!
 
-    gem 'kreegerator'
+    gem install kreegerator
 
-And then execute:
+Then run the command to see which functions are available.
 
-    $ bundle
+    Tasks:
+      kreegerator help [TASK]              # Describe available tasks or one specific task
+      kreegerator ios TEMPLATE CLASS_NAME  # fire off an iOS generator
+      kreegerator retina ACTION GLOB       # handles image adjustments for retina displays
 
-Or install it yourself as:
+To see subfunctions...
 
-    $ gem install kreegerator
+    kreegerator [TASK] list
 
 ## Usage
 

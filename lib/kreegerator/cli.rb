@@ -22,8 +22,8 @@ class Kreegerator::CLI < Thor
   end
 
   desc 'retina ACTION GLOB', 'handles image adjustments for retina displays'
-  method_option :pngnq, desc: 'Runs the files through pngnq as well.', type: :integer
-  def retina(method_name, glob)
+  method_option :pngnq, desc: 'Runs the files through pngnq as well.'
+  def retina(method_name, glob=nil)
     if Kreegerator::Retina.respond_to?(method_name.to_sym)
       if method_name == 'list'
         Kreegerator::Retina.send(method_name.to_sym)

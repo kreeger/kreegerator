@@ -1,4 +1,4 @@
-require 'FileUtils'
+require 'fileutils'
 require 'mini_magick'
 
 class Kreegerator::Retina
@@ -10,6 +10,10 @@ class Kreegerator::Retina
     end
 
     def downscale(glob, opts)
+      if glob.nil?
+        puts "You must specify a file match glob (like 'tmp/*.png') or I won't know what to do!"
+        return
+      end
       Dir[glob].select { |f| f =~ /\.png\Z/i }.each do |file|
         puts "Downscaling #{file}."
         scale_image file, 0.5, true
@@ -31,7 +35,7 @@ class Kreegerator::Retina
     def crunch_image(file, colors)
       puts "Crunching image #{file}."
       cmd = "pngnq #{file} -f -s 1"
-      cmd << " -n #{colors}" unless colors.nil?
+      cmd << " -n #{colors.to_i}" unless colors.nil?
       system cmd
     end
 
