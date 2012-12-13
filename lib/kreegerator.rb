@@ -1,4 +1,5 @@
-require "kreegerator/version"
+require 'kreegerator/ios'
+require 'kreegerator/version'
 
 module Kreegerator
   # Your code goes here...

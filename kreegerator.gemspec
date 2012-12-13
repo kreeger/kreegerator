@@ -4,10 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'kreegerator/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "kreegerator"
+  gem.name          = 'kreegerator'
   gem.version       = Kreegerator::VERSION
-  gem.authors       = ["Ben Kreeger"]
-  gem.email         = ["ben@kree.gr"]
+  gem.authors       = ['Ben Kreeger']
+  gem.email         = ['ben@kree.gr']
   gem.description   = %q{A set of generators for various projects I work on.}
   gem.summary       = %q{A set of generators for various projects I work on.}
   gem.homepage      = 'http://github.com/kreeger/kreegerator'
@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  gem.require_paths = ['lib']
 
   gem.add_runtime_dependency 'thor'
   gem.add_runtime_dependency 'xcodeproj'
