@@ -1,1 +1,41 @@
-IMPLEMENTATION <%= @class_name %>
+//
+//  <%= @class_name %>.m
+//  Created on <%= Time.now.strftime('%y/%m/%d') %>.
+//
+
+#import "<%= @class_name %>.h"
+
+@interface <%= @class_name %> ()
+@end
+
+@implementation <%= @class_name %>
+
+#pragma mark - Lifecycle
+
+- (id)init {
+    if ((self = [super init])) {
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+@end
