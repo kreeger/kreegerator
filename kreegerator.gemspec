@@ -18,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.add_runtime_dependency 'thor'
-  gem.add_runtime_dependency 'xcodeproj'
   gem.add_runtime_dependency 'tilt'
+  gem.add_runtime_dependency 'mini_magick'
 
   gem.add_development_dependency 'rake'
 end

@@ -1,4 +1,5 @@
 require 'kreegerator/ios'
+require 'kreegerator/retina'
 require 'kreegerator/version'
 
 module Kreegerator
