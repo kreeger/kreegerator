@@ -8,11 +8,15 @@ class Kreegerator::CLI < Thor
 
   desc 'ios TEMPLATE CLASS_NAME', 'fire off an iOS generator'
   method_option %w(destination -d), desc: 'The destination where the file will end up.'
-  def ios(method_name, filename)
+  def ios(method_name, filename=nil)
     if Kreegerator::IOS.respond_to?(method_name.to_sym)
-      Kreegerator::IOS.send(method_name.to_sym, path_helper(options[:destination]), filename)
+      if method_name == 'list'
+        Kreegerator::IOS.send(method_name.to_sym)
+      else
+        Kreegerator::IOS.send(method_name.to_sym, path_helper(options[:destination]), filename)
+      end
     else
-      puts 'That generator does not exist.'
+      puts "The generator you asked for ('#{method_name}') does not exist."
     end
   end
 
